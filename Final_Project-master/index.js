@@ -11,11 +11,11 @@ server.views({
   engines: {
     html: require("handlebars")
   },
-  path: "templates", //"templates"
-  layoutPath: "layouts",
+  path: "views/templates", //"templates"
+  layoutPath: "views",
   layout: "default",
   //add partials path here
-    partialsPath: "templates/partials",
+    partialsPath: "views/templates/partials",
 isCached: false
 });
 //register the routes, once matched, I want a response
@@ -25,7 +25,7 @@ isCached: false
 
 server.route({
   method: "GET", //use a method - GET, POST, PUT, DELETE
-  path: "/public/{param*}", //route path, i.e., {name?} name must be there or undefined
+  path: "/", //route path, i.e., {name?} name must be there or undefined
   //path: "/{name?}",
   handler: function(req, reply){ //function called when it gets request from outside, 2 argu
     reply.view("index", {  //load index off the hardrive and use it
@@ -49,9 +49,9 @@ jsonObj = jsonObj.posts;
    method: "GET", //
     path: "/public/{param*}",//matches the name in your html files
     //path: "/{name}/{id}",
-    handler: function(req, reply){
+    handler: {
       directory: {
-        path: "public"
+        path: "build"
         //reply(request.params.name + "|" + request.params.id);
     }
    }
