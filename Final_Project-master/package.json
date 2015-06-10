@@ -1,0 +1,21 @@
+{
+  "name": "Final_Project",
+  "version": "1.0.0",
+  "description": "Blog application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patricia Barker",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.1",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.4.0",
+    "handlebars": "^3.0.3",
+    "hapi": "^8.6.1"
+  }
+}
